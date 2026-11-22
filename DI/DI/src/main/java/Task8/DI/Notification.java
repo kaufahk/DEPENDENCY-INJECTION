@@ -6,4 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Notification {
     private final MessageService service;
+
+    @Autowired
+    public Notification(MessageService service) {
+        this.service = service;
+    }
 }
